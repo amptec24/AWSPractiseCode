@@ -24,12 +24,12 @@ exports.handler = async (event, context, callback) => {
 };
 
 // Function createMessage
-// Writes message to DynamoDb table Contact 
+// Writes message to DynamoDb table Form 
 function createMessage(requestId) {
     const params = {
-        TableName: 'Contact',
+        TableName: 'Form',
         Item: {
-            'contactId' : requestId,
+            'formId' : requestId,
             'message' : 'Hello from lambda'
         }
     }
