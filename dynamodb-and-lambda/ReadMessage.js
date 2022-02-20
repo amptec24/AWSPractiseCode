@@ -2,9 +2,8 @@
 // Loads in the AWS SDK
 const AWS = require('aws-sdk'); 
 
-// Creates the document client specifing the region 
-
-const Ddb = new AWS.DynamoDB.DocumentClient({region: 'us-west-2'}); 
+// Creates the document client specifing the region, in my case it eu-west-2
+const Ddb = new AWS.DynamoDB.DocumentClient({region: 'eu-west-2'}); 
 
 exports.handler = async (event, context, callback) => {
     // Handle promise fulfilled/rejected states
