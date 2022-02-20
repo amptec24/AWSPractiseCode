@@ -26,11 +26,11 @@ exports.handler = async (event, context, callback) => {
 };
 
 // Function readMessage
-// Reads 10 messages from the DynamoDb table ContactUs
+// Reads 10 messages from the DynamoDb table Contact
 // Returns promise
 function readMessage() {
     const params = {
-        TableName: 'ContactUs',
+        TableName: 'Contact',
         Limit: 10
     }
     return Ddb.scan(params).promise();
